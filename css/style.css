@@ -1,0 +1,131 @@
+/** common css for jquery*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6,ul,ul,p,span,ol{
+    margin: 0;
+    padding: 0;
+}
+.justify-center{
+    justify-content: center;
+}
+.container{
+width: 1170px;
+margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.align-center{
+    align-items: center;
+}
+/**common css for jquery*/
+
+
+
+
+section{
+height: 100vh;
+justify-content: center;
+align-items: center;
+display: flex;
+}
+.wrapper{
+    display: flex;
+    max-width: 80%;
+    gap: 1rem;
+}
+.wrapper img{
+    width: 100%;
+max-width: 238px;
+}
+
+
+
+
+.modal{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.45);
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+}
+.modal img{
+    width: 300px;
+}
+.modal .cnt{
+    position: relative;
+    transform: scale(0);
+    opacity: 0;
+    transition: 0.45s;
+}
+.modal button.closeBtn{
+border: none;
+background-color: red;
+color: white;
+padding: 10px;
+position: absolute;
+top: 0;
+left: 100%;
+cursor: pointer;
+transform: scale(0);
+
+}
+.modal.active{
+    opacity: 1;
+  visibility: visible;
+    
+}
+
+.modal.active .cnt{
+    opacity: 1;
+    transform: scale(1);
+}
+.modal.active .closeBtn{
+    transform: scale(1);
+
+}
+.modal .prevArrow,
+.modal .nextArrow{
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+background-color: black;
+color: white;
+padding: 10px;
+border: none;
+cursor: pointer;
+transition: 0.3s;
+transition-delay: 0.25s;
+}
+.modal .prevArrow{
+    left: 0;
+opacity: 0;
+}
+.modal .nextArrow{
+    right: 0;
+    opacity: 0;
+}
+
+.modal.active .prevArrow{
+    left: -50px;
+opacity: 1;
+}
+.modal.active .nextArrow{
+    right: -50px;
+    opacity: 1;
+}
